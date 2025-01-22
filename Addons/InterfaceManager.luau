@@ -7,7 +7,7 @@ local InterfaceManager = {} do
         Theme = "Dark",
         Acrylic = false,
         Transparency = false,
-        MenuKeybind = Enum.KeyCode.RightControl
+        MenuKeybind = Enum.KeyCode.LeftControl
     }
 
     function InterfaceManager:SetFolder(folder)
@@ -102,7 +102,16 @@ local InterfaceManager = {} do
 			})
 		end
 	
-
+		section:AddToggle("InterfaceManager_TransparentToggle", {
+			Title = "Transparency",
+			Description = "Makes the interface transparent.",
+			Default = Settings.Transparency,
+			Callback = function(Value)
+				Library:ToggleTransparency(Value)
+				Settings.Transparency = Value
+                InterfaceManager:SaveSettings()
+			end
+		})
 	
 		local MenuKeybind = section:AddKeybind("InterfaceManager_MenuKeybind", {
 			Title = "Minimize Bind", 
