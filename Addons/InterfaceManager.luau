@@ -108,7 +108,7 @@ local InterfaceManager = {} do
 			Default = Settings.Transparency,
 			Callback = function(Value)
 				Library:ToggleTransparency(Value)
-				Settings.Transparency = false
+				Settings.Transparency = Value
                 InterfaceManager:SaveSettings()
 			end
 		})
