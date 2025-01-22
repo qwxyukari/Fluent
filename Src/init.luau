@@ -139,7 +139,7 @@ local Library = {
 	DialogOpen = false,
 	UseAcrylic = false,
 	Acrylic = false,
-	Transparency = true,
+	Transparency = false,
 	MinimizeKey = Enum.KeyCode.LeftControl,
 
 	GUI = BaseContainer
