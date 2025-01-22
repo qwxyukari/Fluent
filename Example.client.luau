@@ -363,6 +363,14 @@ if Main.UseAcrylic then
     })
 end
 
+InterfaceSection:Toggle("TransparentToggle", {
+    Title = "Transparency",
+    Description = "Makes the interface transparent.",
+    Default = Main.Transparency,
+    Callback = function(Value)
+        Main:ToggleTransparency(Value)
+    end
+})
 
 InterfaceSection:Keybind("MenuKeybind", {
     Title = "Minimize Bind", 
